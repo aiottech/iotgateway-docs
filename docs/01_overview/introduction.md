@@ -5,6 +5,8 @@ title: Introduction
 description: Official Technical Documentation and Developer Portal for the Mini IoT Gateway family (MGW-IoT-001 / MGW-IoT-002) distributed by CONSTH Vietnam.
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # CONSTH MGW Developer Center
 
 Welcome to the official developer portal for the **Mini IoT Gateway (`MGW-IoT-002`)**, developed, manufactured, and distributed by [**Công ty Cổ phần Thương mại CONSTH (CONSTH Vietnam)**](https://consth.vn/).
@@ -13,7 +15,7 @@ The `MGW-IoT-002` is an industrial-grade, surface-mount Edge IoT coprocessor eng
 
 <div style={{ textAlign: 'center', margin: '30px 0' }}>
   <img 
-    src="/img/mgw_module.png" 
+    src={useBaseUrl('/img/mgw_module.png')} 
     alt="CONSTH MGW-IoT-002 Module" 
     style={{ maxWidth: '340px', borderRadius: '12px', boxShadow: '0 8px 24px rgba(0,0,0,0.15)' }} 
   />
