@@ -3,9 +3,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AIoT Tech Developer Center',
-  tagline: 'Official Technical Documentation for MGW Gateways & Edge Devices',
-  favicon: 'img/favicon.ico',
+  title: 'CONSTH MGW Developer Center',
+  tagline: 'Official Technical Documentation for MGW Gateways by CONSTH Vietnam',
+  favicon: 'img/logo.png',
 
   url: 'https://aiottech.github.io',
   baseUrl: '/iotgateway-docs/',
@@ -13,7 +13,6 @@ const config = {
   organizationName: 'aiottech', 
   projectName: 'iotgateway-docs', 
 
-  onBrokenLinks: 'warn',
   onBrokenLinks: 'warn',
   markdown: {
     hooks: {
@@ -47,17 +46,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'AIoT Tech Docs',
+        title: 'MGW Docs',
         logo: {
-          alt: 'AIoT Tech Logo',
-          src: 'img/logo.svg',
+          alt: 'CONSTH Vietnam Logo',
+          src: 'img/logo.png',
+          href: 'https://consth.vn/', // Clicking the logo opens the official CONSTH website
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'MGW Gateway Manual',
+            label: 'Gateway Manual',
+          },
+          {
+            href: 'https://consth.vn/',
+            label: 'CONSTH Official Website ↗',
+            position: 'right',
           },
           {
             href: 'https://github.com/aiottech/iotgateway',
@@ -68,7 +73,52 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} AIoT Tech Inc. All rights reserved.`,
+        links: [
+          {
+            title: 'Documentation',
+            items: [
+              {
+                label: 'Introduction',
+                to: '/',
+              },
+              {
+                label: 'Quick Start Guide',
+                to: '/overview/quick_start',
+              },
+              {
+                label: 'Hardware Pinout',
+                to: '/overview/hardware_pinout',
+              },
+            ],
+          },
+          {
+            title: 'Company & Distribution',
+            items: [
+              {
+                label: 'Công ty CP Thương Mại CONSTH',
+                href: 'https://consth.vn/',
+              },
+              {
+                label: 'CONSTH Corporate Portal',
+                href: 'https://consth.vn/',
+              },
+            ],
+          },
+          {
+            title: 'Software & Repositories',
+            items: [
+              {
+                label: 'Firmware Releases',
+                href: 'https://github.com/aiottech/iotgateway/tree/main/bin',
+              },
+              {
+                label: 'GitHub Organization',
+                href: 'https://github.com/aiottech',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} Công ty Cổ phần Thương mại CONSTH (CONSTH Vietnam). All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,
