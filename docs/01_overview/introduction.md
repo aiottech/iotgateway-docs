@@ -17,7 +17,7 @@ The `MGW-IoT-002` is an industrial-grade Edge IoT coprocessor designed to bridge
 
 * **Dual-Active Host Interface:** Concurrent **UART1** and **High-Speed SPI1** (DMA + Hardware Handshake) support.
 * **Stream Protocol V2:** Resilient, HTTP-style chunked binary streaming with cumulative IEEE 802.3 CRC32 verification.
-* **Zero-Allocation Host MCU C SDK:** Lightweight ANSI C drivers (`mgw_host_mcu_parser` & `mgw_host_file_bridge`) running in $\le 560\text{ bytes}$ of RAM.
+* **Zero-Allocation Host MCU C SDK:** Lightweight ANSI C drivers (`mgw_host_mcu_parser` & `mgw_host_file_bridge`) running in ≤ 560 bytes of RAM.
 * **Dynamic Web Plugins:** Stream custom HTML5/CSS/JS control panels directly from your Host MCU SD card into the MGW Web Dashboard.
 * **Native File Explorer & FTP Server:** Manage Host MCU storage wirelessly from a browser or Windows File Explorer.
 
