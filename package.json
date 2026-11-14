@@ -21,14 +21,13 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini.all"
+      ">0.5%",
+      "not dead"
     ],
     "development": [
-      "last 1chrome version",
-      "last 1firefox version",
-      "last 1safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
     ]
   }
 }
