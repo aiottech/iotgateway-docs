@@ -15,20 +15,20 @@ This guide will walk you through powering up your gateway for the first time, co
 ## 1. What You Need Before You Begin
 
 Before powering up your `MGW-IoT-002` module, ensure you have:
-* A stable 5V DC Power Supply connected to the USB-C power port.
-* A Wi-Fi enabled smartphone, tablet, or laptop (for initial configuration).
-* Your local factory Wi-Fi Router SSID and WPA2 Password.
+* A stable 3.3V / 5V DC power source connected to the gateway module.
+* A Wi-Fi-enabled smartphone, tablet, or laptop (for initial configuration).
+* Your local facility Wi-Fi Router SSID and WPA2 Password.
 
 ---
 
-## 2. Powering Up & Boot Modes
+## 2. Powering Up & Operating Modes
 
-When you apply power to the MGW gateway, it initializes its system storage and reads the persistent boot configuration from non-volatile flash. MGW operates in two primary user-facing boot modes:
+When you apply power to the MGW gateway, it initializes its system storage and reads the persistent boot configuration from internal flash. MGW operates in two primary user-facing modes:
 
-1. **Configure Mode (`STARTUP_CONFIGURE_MODE`):** 
+1. **Configure Mode:** 
    * **When it triggers:** Automatically on first boot out-of-box, or when explicitly requested.
-   * **Behavior:** Launches a local Wi-Fi Access Point (SoftAP) and hosts the internal web configuration dashboard, allowing you to perform initial settings.
-2. **Normal Mode (`STARTUP_NORMAL_MODE`):**
+   * **Behavior:** Launches a local Wi-Fi Access Point (SoftAP) and hosts the internal web configuration dashboard, allowing you to perform initial network settings.
+2. **Normal Mode:**
    * **When it triggers:** Once initial settings are saved and the gateway is rebooted.
    * **Behavior:** Disables the SoftAP hotspot and establishes full high-speed bi-directional communication with your Host MCU (over UART or SPI) and local automation networks.
 
@@ -40,10 +40,18 @@ When powering up the gateway out-of-box, it automatically starts in **Configure 
 
 1. Open the Wi-Fi settings on your laptop or smartphone.
 2. Search for available wireless networks and connect to the SSID broadcasted by your gateway:
-   * **SSID Format:** `MGW-XXXXXXXX` (where `XXXXXXXX` is your unique 8-character hardware device code derived from your base adapter MAC address, printed on the gateway label).
+   * **SSID Format:** `MGW-XXXXXXXX` (where `XXXXXXXX` is your unique 8-character hardware device code derived from your base MAC address, printed on the gateway label).
    * **Password:** Initially set to your device code (or `admin` depending on factory batch).
-3. Once connected, open your web browser (Google Chrome, Microsoft Edge, or Safari) and navigate to the gateway's fixed management IP address:
-   * **URL:** `http://192.168.4.1`
+3. Once connected, open your web browser (Google Chrome, Microsoft Edge, or Safari) and navigate to the gateway's web portal.
+
+:::tip Recommended Access Method
+Navigate to the gateway's local mDNS domain name:  
+👉 **`http://mgw-xxxxxxxx.local/`** *(replace `xxxxxxxx` with your 8-character device code, e.g., `http://mgw-1721b010.local/`)*
+
+If your operating system does not support mDNS, you can always navigate directly to the fixed fallback IP address:  
+👉 **`http://192.168.4.1`**
+:::
+
 4. You will be greeted by the **MGW Admin Center** login screen. Log in using default administrator credentials:
    * **Username:** `admin`
    * **Password:** `admin`
@@ -72,10 +80,10 @@ After completing your initial network settings:
 ## 6. Step 4: Verifying Host MCU Communication
 
 After rebooting into **Normal Mode**:
-1. Connect your Host MCU (e.g., STM32 / NXP) to MGW over physical UART1 or SPI1.
+1. Connect your Host MCU (e.g., STM32 / NXP) to MGW over physical UART1 or SPI1 lines.
 2. Send a basic diagnostic command to verify serial communication:
    ```text
-   cmd version
+   cmd version\r\n
    ```
 3. The gateway will reply with a standard Normal Mode response frame:
    ```text
@@ -89,3 +97,5 @@ After rebooting into **Normal Mode**:
 
    <actual_version_number>
    ```
+
+---
