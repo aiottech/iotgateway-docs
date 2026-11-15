@@ -60,6 +60,11 @@ const config = {
             label: 'Gateway Manual',
           },
           {
+            to: '/downloads',
+            label: 'Download SDK & PDF',
+            position: 'left',
+          },
+          {
             href: 'https://consth.vn/',
             label: 'CONSTH Official Website ↗',
             position: 'right',
