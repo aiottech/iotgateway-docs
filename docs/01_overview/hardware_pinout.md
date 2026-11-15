@@ -75,17 +75,17 @@ To ensure signal integrity and robust operation in demanding industrial automati
 
 ### 3.2 High-Speed SPI Layout Guidelines (20 MHz – 40 MHz)
 When routing the high-speed SPI lines (`IO10`, `IO7`, `IO6`, `IO2`) on your motherboard:
-* Keep trace lengths as short and direct as possible ($\le 10\text{ cm}$).
+* Keep trace lengths as short and direct as possible (≤ 10 cm).
 * Maintain solid ground reference planes directly underneath the SPI bus traces to minimize signal reflections and crosstalk.
-* If trace lengths exceed $15\text{ cm}$, add small series termination resistors ($22\ \Omega - 33\ \Omega$) on `SCK`, `MOSI`, and `MISO` close to the driver pins.
+* If trace lengths exceed 15 cm, add small series termination resistors (22 Ω – 33 Ω) on `SCK`, `MOSI`, and `MISO` close to the driver pins.
 
 ### 3.3 Software-Enabled Internal Pull-Ups
-* The `MGW-IoT-002` firmware automatically enables internal $\approx 45\text{ k}\Omega$ pull-up resistors on critical input lines (including `IO4` / `WIFI_HANDSHAKE` and `IO28` / `FACTORY_RESET`). 
+* The `MGW-IoT-002` firmware automatically enables internal ≈ 45 kΩ pull-up resistors on critical input lines (including `IO4` / `WIFI_HANDSHAKE` and `IO28` / `FACTORY_RESET`). 
 * External pull-up resistors are not required on your motherboard, simplifying your bill of materials (BOM).
 
 ---
 
 ## Next Steps
 
-* Learn about the **[Communication Protocols](../02_communication_protocols/data_transfer_modes.md)** supported by the module.
-* Read the **[High-Speed SPI Integration Guide](../02_communication_protocols/spi_high_speed.md)** for detailed timing diagrams and Host MCU driver implementations.
+* Learn about the **Communication Protocols** supported by the gateway module.
+* Check the **High-Speed SPI Integration Guide** for detailed timing diagrams and Host MCU driver implementations.
