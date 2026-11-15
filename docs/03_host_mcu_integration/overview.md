@@ -32,7 +32,7 @@ This driver acts as the "Glue" between the gateway's web file explorer and your 
 
 | Driver Component | Responsibility | Memory Impact |
 | :--- | :--- | :---: |
-| **Parser Engine** | Raw framing, CRC32, and protocol state. | $\le 560\text{ bytes}$ (Static RAM) |
+| **Parser Engine** | Raw framing, CRC32, and protocol state. | 560 bytes (Static RAM) |
 | **File Bridge** | FatFS/LittleFS callback mapping. | $0\text{ bytes}$ (Stack / Dynamic) |
 
 ---
