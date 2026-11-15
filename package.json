@@ -19,6 +19,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+  "devDependencies": {
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^23.11.1"
+  },
   "browserslist": {
     "production": [
       ">0.5%",

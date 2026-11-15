@@ -4,6 +4,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function Downloads() {
   const sdkZipUrl = useBaseUrl('/sdk/mgw_host_mcu_sdk_v1.0.zip');
+  const pdfManualUrl = useBaseUrl('/pdf/MGW_User_Manual.pdf');
 
   return (
     <Layout
@@ -29,7 +30,7 @@ export default function Downloads() {
                   <div className="card__body" style={{ flex: 1 }}>
                     <p>
                       Pure, portable ANSI C drivers with zero dynamic memory allocations (<code>malloc</code>-free).
-                      Compatible with STM32, NXP, Microchip, PIC, and AVR microcontrollers.
+                      Compatible with STM32, NXP, Microchip, and PIC microcontrollers.
                     </p>
                     <ul>
                       <li><code>mgw_host_mcu_parser.h / .c</code> (Stream V2 &amp; Normal Mode FSM)</li>
@@ -56,7 +57,7 @@ export default function Downloads() {
                 </div>
               </div>
 
-              {/* Card 2: Offline PDF User Manual (Ready for Task 2!) */}
+              {/* Card 2: Offline PDF User Manual */}
               <div className="col col--6 margin-bottom--lg">
                 <div className="card shadow--md" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                   <div className="card__header">
@@ -75,12 +76,19 @@ export default function Downloads() {
                   </div>
                   <div className="card__footer">
                     <a
+                      className="button button--primary button--block margin-bottom--sm"
+                      href={pdfManualUrl}
+                      download="MGW_User_Manual.pdf"
+                    >
+                      ⬇ Download PDF User Manual
+                    </a>
+                    <a
                       className="button button--secondary button--outline button--block"
                       href="https://github.com/aiottech/iotgateway-docs/releases"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      View PDF Releases on GitHub ↗
+                      View Releases Archive on GitHub ↗
                     </a>
                   </div>
                 </div>

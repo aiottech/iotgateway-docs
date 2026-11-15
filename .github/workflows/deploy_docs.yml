@@ -1,4 +1,4 @@
-name: Deploy Docusaurus to GitHub Pages
+name: Deploy Docusaurus & Generate PDF Manual
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Build and Deploy Docusaurus
+    name: Build Site, Export PDF & Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -27,9 +27,25 @@ jobs:
       - name: Build Website
         run: npm run build
 
+      - name: Generate PDF User Manual
+        run: |
+          npx docusaurus serve --port 3000 --no-open &
+          SERVER_PID=$!
+          node scripts/generate_pdf.mjs
+          kill $SERVER_PID || true
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           force_orphan: true
+
+      - name: Publish PDF to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest-manual
+          name: "MGW Official User Manual (Latest PDF)"
+          body: "Automated PDF export compiled from the CONSTH MGW Developer Portal."
+          files: build/pdf/MGW_User_Manual.pdf
+          make_latest: true
