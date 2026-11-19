@@ -84,4 +84,5 @@ void app_init(void) {
 
 ## Next Steps
 
+* **[Web File Explorer Guide](../04_cloud_and_advanced_features/web_file_explorer.md)** — See the browser UI and features powered by this bridge.
 * **[Web Plugins Integration](./web_plugins_bridge.md)** — Learn how to stream your own HTML control panels into the MGW dashboard!

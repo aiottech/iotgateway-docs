@@ -89,4 +89,5 @@ Once the FTP server is running and your PC is on the same Wi-Fi network (or conn
 
 ## Next Steps
 
-* Proceed to Chapter 5 to explore the complete **CLI & AST Command Reference Manual**.
+* Check out the **[Web File Explorer Guide](./web_file_explorer.md)** for zero-client browser-based file management.
+* Proceed to Chapter 5 to explore the complete **[CLI & AST Command Reference Manual](../05_reference/command_reference.md)**.
