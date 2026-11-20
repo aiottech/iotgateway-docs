@@ -63,8 +63,8 @@ async function generateCoverPdf(browser) {
           .logo { height: 42px; }
           .doc-type { font-size: 13px; font-weight: 700; color: #64748b; letter-spacing: 1.5px; text-transform: uppercase; }
           .hero { margin-top: 50px; }
-          h1 { font-size: 40px; line-height: 1.15; margin: 0 0 16px; color: #0f172a; }
-          .subtitle { font-size: 19px; color: #475569; margin: 0 0 40px; line-height: 1.5; }
+          h1 { font-size: 38px; line-height: 1.15; margin: 0 0 16px; color: #0f172a; }
+          .subtitle { font-size: 18px; color: #475569; margin: 0 0 40px; line-height: 1.5; }
           .module-box { text-align: center; margin: 30px 0; }
           .module-img { max-width: 260px; border-radius: 12px; box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
           .footer {
@@ -152,7 +152,7 @@ async function run() {
         );
       });
 
-      // Inject clean @media print styles so it formats like a technical manual
+      // Inject clean @media print styles with compact datasheet typography
       await page.addStyleTag({
         content: `
           @media print {
@@ -174,12 +174,56 @@ async function run() {
               margin: 0 !important;
               padding: 0 !important;
             }
-            pre, table, blockquote, img {
+            html, body, .markdown {
+              font-size: 13px !important;
+              line-height: 1.48 !important;
+            }
+            .markdown h1 {
+              font-size: 24px !important;
+              margin-bottom: 12px !important;
+              break-after: avoid;
+            }
+            .markdown h2 {
+              font-size: 18px !important;
+              margin-top: 20px !important;
+              margin-bottom: 8px !important;
+              break-after: avoid;
+            }
+            .markdown h3 {
+              font-size: 15px !important;
+              margin-top: 14px !important;
+              margin-bottom: 6px !important;
+              break-after: avoid;
+            }
+            .markdown pre {
+              font-size: 10.5px !important;
+              line-height: 1.35 !important;
+              padding: 10px 12px !important;
+              white-space: pre !important;
+              overflow-x: visible !important;
               break-inside: avoid;
             }
-            table {
+            .markdown code {
+              font-size: 11px !important;
+            }
+            .markdown table {
               display: table !important;
               width: 100% !important;
+              font-size: 11.5px !important;
+              border-collapse: collapse !important;
+            }
+            .markdown thead {
+              display: table-header-group !important;
+            }
+            .markdown th, .markdown td {
+              padding: 6px 8px !important;
+            }
+            .markdown tr, blockquote, img, .admonition {
+              break-inside: avoid;
+            }
+            .theme-doc-breadcrumbs {
+              font-size: 11px !important;
+              margin-bottom: 8px !important;
             }
           }
         `,
@@ -187,8 +231,9 @@ async function run() {
 
       const pdfBuffer = await page.pdf({
         format: 'A4',
+        scale: 0.8,
         printBackground: true,
-        margin: { top: '18mm', bottom: '20mm', left: '15mm', right: '15mm' },
+        margin: { top: '14mm', bottom: '16mm', left: '13mm', right: '13mm' },
       });
       pageBuffers.push(pdfBuffer);
 
@@ -216,21 +261,20 @@ async function run() {
 
     const totalPages = mergedPdf.getPageCount();
     for (let i = 1; i < totalPages; i++) {
-      // Skip cover page (index 0)
       const p = mergedPdf.getPage(i);
       const { width } = p.getSize();
       p.drawText(`CONSTH MGW User Manual  |  https://consth.vn/`, {
-        x: 42,
-        y: 22,
-        size: 8.5,
+        x: 38,
+        y: 18,
+        size: 8,
         font,
         color: rgb(0.45, 0.5, 0.58),
       });
       const pageLabel = `Page ${i} of ${totalPages - 1}`;
       p.drawText(pageLabel, {
-        x: width - 95,
-        y: 22,
-        size: 8.5,
+        x: width - 90,
+        y: 18,
+        size: 8,
         font,
         color: rgb(0.45, 0.5, 0.58),
       });

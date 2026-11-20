@@ -87,4 +87,4 @@ For commercial inquiries, volume procurement, custom hardware integrations, or t
 ## Next Steps
 
 * 👉 **[Quick Start Guide](./quick_start.md)** — Power up your gateway and perform initial settings.
-* 🔌 **[Hardware Pinout & Wiring](./hardware_pinout.md)** — Learn how to connect your Host MCU via the `CN42` connector.
+* 🔌 **[Hardware Pinout & Wiring](./hardware_pinout.md)** — View the standalone module pinout and electrical specifications.
