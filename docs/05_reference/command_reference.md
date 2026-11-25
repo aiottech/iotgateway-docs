@@ -313,7 +313,7 @@ Basic system utilities registered on boot. These commands bypass standard licens
 ### 4.14 `set-global-ack-timeout`
 * **Purpose:** Configures the global default flow-control ACK wait timeout limit across all streaming interfaces.
 * **Parameters:**
-  * `--timeout` / `-t` (Required, Integer): Timeout limit in milliseconds ($100 \le \text{timeout} \le 60000$).
+  * `--timeout` / `-t` (Required, Integer): Timeout limit in milliseconds (100 ms to 60000 ms).
 * **Return Value:** `"Global ACK timeout set to <ms> ms"`.
 * **CLI Syntax:** `cmd set-global-ack-timeout --timeout 10000`
 
@@ -419,7 +419,7 @@ Basic system utilities registered on boot. These commands bypass standard licens
 ---
 
 ### 5.7 `activate-license`
-* **Purpose:** Connects to the official GitHub raw repository, streams the device code catalogs, downloads the ECDSA P-256 signature, validates authenticity, and registers the license key permanently.
+* **Purpose:** Connects to the official GitHub raw repository, streams the device code catalogs, downloads the signature, validates authenticity, and registers the license key permanently.
 * **Parameters:** None.
 * **Return Value:** `"OK"`.
 * **CLI Syntax:** `cmd activate-license`
@@ -439,7 +439,7 @@ Basic system utilities registered on boot. These commands bypass standard licens
 ### 6.1 `set-ap-password`
 * **Purpose:** Sets the WPA2 passphrase for the gateway's SoftAP configuration hotspot.
 * **Parameters:**
-  * `--password` / `-p` (Required, String): Hotspot password ($\ge 8$ characters).
+  * `--password` / `-p` (Required, String): Hotspot password (≥ 8 characters).
   * `--confirm_password` / `-c` (Required, String): Confirmation password.
 * **Return Value:** `"Access point password set successfully!"`.
 * **CLI Syntax:** `cmd set-ap-password -p "12345678" -c "12345678"`
@@ -471,7 +471,7 @@ Basic system utilities registered on boot. These commands bypass standard licens
 ---
 
 ### 6.5 `start-ble`
-* **Purpose:** Powers on the NimBLE controller and begins Bluetooth LE advertising.
+* **Purpose:** Powers on the Bluetooth LE controller and begins advertising.
 * **Parameters:** None.
 * **Return Value:** `"Start BLE done"`.
 * **CLI Syntax:** `cmd start-ble`
@@ -479,7 +479,7 @@ Basic system utilities registered on boot. These commands bypass standard licens
 ---
 
 ### 6.6 `disable-ble`
-* **Purpose:** Shuts down the NimBLE stack and returns Bluetooth controller DRAM back to internal SRAM.
+* **Purpose:** Shuts down the Bluetooth LE stack and reclaims memory.
 * **Parameters:** None.
 * **Return Value:** `"Disable BLE done"`.
 * **CLI Syntax:** `cmd disable-ble`
@@ -567,7 +567,7 @@ Basic system utilities registered on boot. These commands bypass standard licens
 * **Purpose:** Synthesizes text into speech and streams audio directly to the connected Bluetooth speaker.
 * **Parameters:**
   * `--text` / `-t` (Required, String): Text sentence to synthesize.
-  * `--mode` / `-m` (Optional, String): Synthesis mode (`"cloud"` for high-fidelity TTS, or `"offline"` for S.A.M. speech synthesis).
+  * `--mode` / `-m` (Optional, String): Synthesis mode (`"cloud"` for high-fidelity TTS, or `"offline"` for offline speech synthesis).
 * **Return Value:** `"OK"`.
 * **CLI Syntax:** `cmd bt-speak -t "System Online" -m "cloud"`
 
@@ -667,7 +667,7 @@ Basic system utilities registered on boot. These commands bypass standard licens
 ---
 
 ### 7.8 `start-web-server`
-* **Purpose:** Starts the complete Web Dashboard stack (REST API, mDNS hostname, and WebSocket server). In Normal Mode, validates that Wi-Fi is actively connected before starting. Returns the clickable URL.
+* **Purpose:** Starts the complete Web Dashboard stack (REST API, mDNS hostname, and WebSocket server). In Normal Mode, validates that Wi-Fi is actively connected before starting. Returns the accessible URL.
 * **Parameters:** None.
 * **Return Value:** Accessible URLs (e.g., `"http://mgw-18a93114.local/ (http://192.168.0.124/)"`).
 * **CLI Syntax:** `cmd start-web-server`
@@ -692,9 +692,9 @@ Basic system utilities registered on boot. These commands bypass standard licens
 ---
 
 ### 7.11 `update-firmware`
-* **Purpose:** Saves firmware update parameters to NVS, sets boot mode to OTA, and restarts into an un-fragmented SRAM environment to download and flash new firmware.
+* **Purpose:** Saves firmware update parameters to NVS, sets boot mode to OTA, and restarts to download and flash new firmware safely.
 * **Parameters:**
-  * `--url` / `-u` (Optional, String): URL of target binary. Defaults to official GitHub catalog if omitted.
+  * `--url` / `-u` (Optional, String): URL of target binary. Defaults to official release catalog if omitted.
   * `--header` / `-h` (Optional, String): Custom authentication header for private OTA servers. Supports multiple `--header` flags.
 * **Return Value:** `"System entering OTA mode. Restarting..."`.
 * **CLI Syntax:** `cmd update-firmware --url "https://my-server.com/fw.bin"`
@@ -702,7 +702,7 @@ Basic system utilities registered on boot. These commands bypass standard licens
 ---
 
 ### 7.12 `get-firmware-list`
-* **Purpose:** Downloads and returns the available firmware JSON release catalog from GitHub.
+* **Purpose:** Downloads and returns the available firmware release catalog.
 * **Parameters:** None.
 * **Return Value:** Raw JSON array string.
 * **CLI Syntax:** `cmd get-firmware-list`
@@ -902,7 +902,7 @@ Allows Host MCUs (STM32, NXP) to inject their own HTML5/JS control panels direct
 ---
 
 ### 10.3 `audit-memory`
-* **Purpose:** Triggers an immediate diagnostic audit of allocated heap structures and VMM PSRAM pools.
+* **Purpose:** Triggers an immediate diagnostic audit of allocated memory structures.
 * **Parameters:** None.
 * **Return Value:** `"OK"`.
 * **CLI Syntax:** `cmd audit-memory`
@@ -911,5 +911,5 @@ Allows Host MCUs (STM32, NXP) to inject their own HTML5/JS control panels direct
 
 ## Next Steps
 
-* Refer to the **Unified Customer Communication Protocols & Host MCU Driver Manual** for protocol timing and packet diagrams.
-* Check the **Error Codes Reference** for troubleshooting failed command return frames.
+* Refer to the **Communication Protocols** guides for protocol timing and packet diagrams.
+* Check the **[Error Codes Reference](./error_codes.md)** for troubleshooting failed command return frames.
