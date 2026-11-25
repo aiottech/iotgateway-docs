@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-reference/command_reference" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Command Reference Manual | CONSTH MGW Developer Center</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://aiottech.github.io/iotgateway-docs/reference/command_reference"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Command Reference Manual | CONSTH MGW Developer Center"><meta data-rh="true" name="description" content="Complete customer reference for all CLI commands supported by the MGW gateway."><meta data-rh="true" property="og:description" content="Complete customer reference for all CLI commands supported by the MGW gateway."><link data-rh="true" rel="icon" href="/iotgateway-docs/img/logo.png"><link data-rh="true" rel="canonical" href="https://aiottech.github.io/iotgateway-docs/reference/command_reference"><link data-rh="true" rel="alternate" href="https://aiottech.github.io/iotgateway-docs/reference/command_reference" hreflang="en"><link data-rh="true" rel="alternate" href="https://aiottech.github.io/iotgateway-docs/reference/command_reference" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Command Reference Manual","item":"https://aiottech.github.io/iotgateway-docs/reference/command_reference"}]}</script><link rel="stylesheet" href="/iotgateway-docs/assets/css/styles.1320eb4d.css">
+<script src="/iotgateway-docs/assets/js/runtime~main.5d9885de.js" defer="defer"></script>
+<script src="/iotgateway-docs/assets/js/main.27b4a7c2.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://consth.vn/" target="_blank" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/iotgateway-docs/img/logo.png" alt="CONSTH Vietnam Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/iotgateway-docs/img/logo.png" alt="CONSTH Vietnam Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">MGW Docs</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/iotgateway-docs/">Gateway Manual</a><a class="navbar__item navbar__link" href="/iotgateway-docs/downloads">Download SDK &amp; PDF</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://consth.vn/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">CONSTH Official Website ↗<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://github.com/aiottech/iotgateway" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub Firmware<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/iotgateway-docs/"><span class="categoryLinkLabel_W154">Overview &amp; Setup</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/"><span class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/overview/quick_start"><span class="linkLabel_WmDU">Quick Start Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/overview/hardware_pinout"><span class="linkLabel_WmDU">Hardware Pinout &amp; Wiring</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/iotgateway-docs/communication_protocols/data_transfer_modes"><span class="categoryLinkLabel_W154">Communication Protocols</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/communication_protocols/data_transfer_modes"><span class="linkLabel_WmDU">Data Transfer Modes</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/communication_protocols/uart_setup"><span class="linkLabel_WmDU">UART Serial Setup</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/communication_protocols/spi_high_speed"><span class="linkLabel_WmDU">High-Speed SPI Integration</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/iotgateway-docs/host_mcu_integration/overview"><span class="categoryLinkLabel_W154">Host MCU Integration</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/host_mcu_integration/overview"><span class="linkLabel_WmDU">Integration Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/host_mcu_integration/file_explorer_bridge"><span class="linkLabel_WmDU">File Explorer Bridge Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/host_mcu_integration/web_plugins_bridge"><span class="linkLabel_WmDU">Dynamic Web Plugins</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/iotgateway-docs/cloud_and_advanced_features/security_and_auth"><span class="categoryLinkLabel_W154">Cloud &amp; Advanced Features</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/cloud_and_advanced_features/security_and_auth"><span class="linkLabel_WmDU">Security &amp; Authentication</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/cloud_and_advanced_features/signalr_integration"><span class="linkLabel_WmDU">SignalR Cloud Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/cloud_and_advanced_features/ota_firmware_updates"><span class="linkLabel_WmDU">OTA Firmware Updates</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/cloud_and_advanced_features/native_ftp_server"><span class="linkLabel_WmDU">Native FTP Server</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/cloud_and_advanced_features/web_file_explorer"><span class="linkLabel_WmDU">Web File Explorer</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/iotgateway-docs/reference/command_reference"><span class="categoryLinkLabel_W154">Reference Manuals</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/iotgateway-docs/reference/command_reference"><span class="linkLabel_WmDU">Command Reference Manual</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/iotgateway-docs/reference/error_codes"><span class="linkLabel_WmDU">Error Codes Reference</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/iotgateway-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Reference Manuals</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Command Reference Manual</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Command Reference Manual</h1></header>
+<p>The <strong>Mini IoT Gateway (<code>MGW-IoT-002</code>)</strong> provides a standardized, human-readable Command Line Interface (CLI) accessible across all physical and wireless interfaces: <strong>UART1</strong>, <strong>SPI1</strong>, <strong>Bluetooth LE</strong>, <strong>WebSockets</strong>, and <strong>HTTP REST</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="general-rules">General Rules:<a href="#general-rules" class="hash-link" aria-label="Direct link to General Rules:" title="Direct link to General Rules:" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>Line Termination:</strong> All commands transmitted over physical serial lines (<strong>UART1</strong> or <strong>SPI1</strong>) must end with standard Carriage Return and Line Feed: <code>\r\n</code>.</li>
+<li class=""><strong>Command Prefix:</strong> All command strings must start with the <code>cmd </code> prefix (e.g., <code>cmd get-time</code>).</li>
+<li class=""><strong>Authentication Token:</strong> When an administrator password is set on the gateway, commands executed over wireless/network interfaces (<strong>WebSockets</strong>, <strong>HTTP REST</strong>, <strong>BLE</strong>) must include the <code>--token &quot;&lt;token&gt;&quot;</code> parameter unless the command is classified as Public. Commands sent over physical <strong>UART1</strong> and <strong>SPI1</strong> do not require tokens after performing a one-time <code>cmd login</code>.</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-universal-streaming-flags">1. Universal Streaming Flags<a href="#1-universal-streaming-flags" class="hash-link" aria-label="Direct link to 1. Universal Streaming Flags" title="Direct link to 1. Universal Streaming Flags" translate="no">​</a></h2>
+<p>Commands capable of streaming high-volume or chunked data (such as <code>cmd http</code>, <code>cmd http-download</code>, <code>cmd scan-wifi</code>, and <code>cmd fs-read</code>) support these optional execution flags:</p>
+<table><thead><tr><th style="text-align:left">Parameter Flag</th><th style="text-align:center">Type</th><th style="text-align:center">Default</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><strong><code>--stream &lt;bool&gt;</code></strong></td><td style="text-align:center">Boolean</td><td style="text-align:center">Skill Default</td><td style="text-align:left">Forces Stream Protocol V2 (<code>true</code>) or atomic Normal Mode (<code>false</code>).</td></tr><tr><td style="text-align:left"><strong><code>--flow &lt;mode&gt;</code></strong></td><td style="text-align:center">String</td><td style="text-align:center"><code>&quot;none&quot;</code></td><td style="text-align:left">Flow control mode: <code>&quot;none&quot;</code> (continuous), <code>&quot;ack&quot;</code> (1-byte <code>0x06</code> software ACK handshake), or <code>&quot;rts&quot;</code> (hardware RTS/CTS).</td></tr><tr><td style="text-align:left"><strong><code>--ack-timeout &lt;ms&gt;</code></strong></td><td style="text-align:center">Integer</td><td style="text-align:center">Global NVS Setting</td><td style="text-align:left">Overrides the flow-control ACK wait timeout limit in milliseconds for this specific command (e.g., <code>--ack-timeout 10000</code>).</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-platform-diagnostics--utility-commands">2. Platform Diagnostics &amp; Utility Commands<a href="#2-platform-diagnostics--utility-commands" class="hash-link" aria-label="Direct link to 2. Platform Diagnostics &amp; Utility Commands" title="Direct link to 2. Platform Diagnostics &amp; Utility Commands" translate="no">​</a></h2>
+<p>Basic system utilities registered on boot. These commands bypass standard license and password checks, making them accessible on raw, unactivated gateways.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="21-version">2.1 <code>version</code><a href="#21-version" class="hash-link" aria-label="Direct link to 21-version" title="Direct link to 21-version" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the compiled gateway application firmware version.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Firmware version string (e.g., <code>&quot;1.6.0&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd version</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-get-mac">2.2 <code>get-mac</code><a href="#22-get-mac" class="hash-link" aria-label="Direct link to 22-get-mac" title="Direct link to 22-get-mac" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the physical base MAC address of the gateway&#x27;s network adapter.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> 12-character hexadecimal MAC string (e.g., <code>&quot;d0cf13ef641e&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-mac</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="23-result-length">2.3 <code>result-length</code><a href="#23-result-length" class="hash-link" aria-label="Direct link to 23-result-length" title="Direct link to 23-result-length" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the total byte length of the latest transaction payload stored in the ring buffer.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Numeric string indicating byte count (e.g., <code>&quot;1562&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd result-length</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="24-get-result">2.4 <code>get-result</code><a href="#24-get-result" class="hash-link" aria-label="Direct link to 24-get-result" title="Direct link to 24-get-result" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Retrieves a sliced byte segment of a completed transaction from the historical ring catalog.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--from</code> / <code>-f</code> (Required, Integer): Starting byte offset.</li>
+<li class=""><code>--to</code> / <code>-t</code> (Required, Integer): Ending byte offset.</li>
+<li class=""><code>--id</code> / <code>-i</code> (Optional, Integer): Target Transaction ID (defaults to latest if omitted).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> Raw byte stream of the requested segment.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-result --from 0 --to 500 --id 14</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="25-get-time">2.5 <code>get-time</code><a href="#25-get-time" class="hash-link" aria-label="Direct link to 25-get-time" title="Direct link to 25-get-time" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the currently active system date, time, and configured timezone.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Formatted DateTime string (e.g., <code>&quot;01/01/1970 00:45:15 (UTC+0)&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-time</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="26-set-time">2.6 <code>set-time</code><a href="#26-set-time" class="hash-link" aria-label="Direct link to 26-set-time" title="Direct link to 26-set-time" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Modifies the gateway&#x27;s system clock and saves the timezone setting to persistent storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--time</code> / <code>-t</code> (Required, String): New DateTime string in <code>&quot;dd/MM/yyyy HH:mm:ss&quot;</code> format.</li>
+<li class=""><code>--zone</code> / <code>-z</code> (Optional, String): POSIX timezone identifier (e.g., <code>&quot;UTC+7&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Time set successfully.&quot;</code> on success.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-time --time &quot;05/11/2026 20:15:30&quot; --zone &quot;UTC+7&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="27-enable-log">2.7 <code>enable-log</code><a href="#27-enable-log" class="hash-link" aria-label="Direct link to 27-enable-log" title="Direct link to 27-enable-log" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Re-enables on-board diagnostic UART0 logging prints.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd enable-log</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="28-disable-log">2.8 <code>disable-log</code><a href="#28-disable-log" class="hash-link" aria-label="Direct link to 28-disable-log" title="Direct link to 28-disable-log" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Silences all target diagnostic UART0 logging output (Production Mode optimization).</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd disable-log</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="29-echo">2.9 <code>echo</code><a href="#29-echo" class="hash-link" aria-label="Direct link to 29-echo" title="Direct link to 29-echo" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Repeats back input text payloads for diagnostic latency and echo verification tests.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--content</code> / <code>-c</code> (Required, String): Text payload to repeat back.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> The exact input string.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd echo -c &quot;Hello Gateway&quot;</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-storage--configuration-commands">3. Storage &amp; Configuration Commands<a href="#3-storage--configuration-commands" class="hash-link" aria-label="Direct link to 3. Storage &amp; Configuration Commands" title="Direct link to 3. Storage &amp; Configuration Commands" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-save-user-data">3.1 <code>save-user-data</code><a href="#31-save-user-data" class="hash-link" aria-label="Direct link to 31-save-user-data" title="Direct link to 31-save-user-data" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Writes a custom key-value record to the in-memory contiguous cache.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--key</code> / <code>-k</code> (Required, String): Unique key identifier.</li>
+<li class=""><code>--value</code> / <code>-v</code> (Required, String): String value to associate with the key.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd save-user-data --key &quot;http_header0&quot; --value &quot;Authorization: Bearer Token123&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-get-user-data">3.2 <code>get-user-data</code><a href="#32-get-user-data" class="hash-link" aria-label="Direct link to 32-get-user-data" title="Direct link to 32-get-user-data" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Retrieves a custom data record from the in-memory contiguous cache.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--key</code> / <code>-k</code> (Required, String): Target key identifier.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> The saved value string.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-user-data --key &quot;http_header0&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-delete-user-data">3.3 <code>delete-user-data</code><a href="#33-delete-user-data" class="hash-link" aria-label="Direct link to 33-delete-user-data" title="Direct link to 33-delete-user-data" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Erases a specific custom record from the in-memory cache and compacts storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--key</code> / <code>-k</code> (Required, String): Target key to delete.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd delete-user-data --key &quot;http_header0&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-delete-all-user-data">3.4 <code>delete-all-user-data</code><a href="#34-delete-all-user-data" class="hash-link" aria-label="Direct link to 34-delete-all-user-data" title="Direct link to 34-delete-all-user-data" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Completely clears all custom key-value records from the in-memory cache.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd delete-all-user-data</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="35-set-startup-mode">3.5 <code>set-startup-mode</code><a href="#35-set-startup-mode" class="hash-link" aria-label="Direct link to 35-set-startup-mode" title="Direct link to 35-set-startup-mode" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Configures the default operating startup mode in persistent NVS flash.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--mode</code> / <code>-m</code> (Required, String): Boot mode (<code>&quot;configure&quot;</code>, <code>&quot;normal&quot;</code>, or <code>&quot;ota&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-startup-mode --mode &quot;configure&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="36-get-startup-mode">3.6 <code>get-startup-mode</code><a href="#36-get-startup-mode" class="hash-link" aria-label="Direct link to 36-get-startup-mode" title="Direct link to 36-get-startup-mode" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the saved boot mode from persistent NVS flash.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;configure&quot;</code>, <code>&quot;normal&quot;</code>, or <code>&quot;ota&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-startup-mode</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="37-set-nvs">3.7 <code>set-nvs</code><a href="#37-set-nvs" class="hash-link" aria-label="Direct link to 37-set-nvs" title="Direct link to 37-set-nvs" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Writes a raw configuration string directly into persistent NVS storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--key</code> / <code>-k</code> (Required, String): Storage key (maximum 15 characters).</li>
+<li class=""><code>--value</code> / <code>-v</code> (Required, String): Value string.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-nvs --key &quot;custom_param&quot; --value &quot;12345&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="38-get-nvs">3.8 <code>get-nvs</code><a href="#38-get-nvs" class="hash-link" aria-label="Direct link to 38-get-nvs" title="Direct link to 38-get-nvs" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Reads a raw configuration string directly from persistent NVS storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--key</code> / <code>-k</code> (Required, String): Storage key.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> The stored string value.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-nvs --key &quot;custom_param&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="39-delete-nvs">3.9 <code>delete-nvs</code><a href="#39-delete-nvs" class="hash-link" aria-label="Direct link to 39-delete-nvs" title="Direct link to 39-delete-nvs" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Erases a key-value record from persistent NVS storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--key</code> / <code>-k</code> (Required, String): Target key to erase.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd delete-nvs --key &quot;custom_param&quot;</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-peripherals--system-control-commands">4. Peripherals &amp; System Control Commands<a href="#4-peripherals--system-control-commands" class="hash-link" aria-label="Direct link to 4. Peripherals &amp; System Control Commands" title="Direct link to 4. Peripherals &amp; System Control Commands" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-gpio-config">4.1 <code>gpio-config</code><a href="#41-gpio-config" class="hash-link" aria-label="Direct link to 41-gpio-config" title="Direct link to 41-gpio-config" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Configures the direction of a physical GPIO pin.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--pin</code> / <code>-p</code> (Required, Integer): Target GPIO pin number.</li>
+<li class=""><code>--type</code> / <code>-t</code> (Required, String): Mode (<code>&quot;input&quot;</code> or <code>&quot;output&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;gpio config done successfully&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd gpio-config --pin 8 --type &quot;output&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-gpio-set">4.2 <code>gpio-set</code><a href="#42-gpio-set" class="hash-link" aria-label="Direct link to 42-gpio-set" title="Direct link to 42-gpio-set" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Writes a digital high or low level to an output GPIO pin.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--pin</code> / <code>-p</code> (Required, Integer): Target GPIO pin number.</li>
+<li class=""><code>--level</code> / <code>-l</code> (Required, Integer): Output level (<code>0</code> for Low, <code>1</code> for High).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;gpio set level done successfully&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd gpio-set --pin 8 --level 1</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-gpio-get">4.3 <code>gpio-get</code><a href="#43-gpio-get" class="hash-link" aria-label="Direct link to 43-gpio-get" title="Direct link to 43-gpio-get" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Reads the digital input level of a target GPIO pin.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--pin</code> / <code>-p</code> (Required, Integer): Target GPIO pin number.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;0&quot;</code> (Low) or <code>&quot;1&quot;</code> (High).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd gpio-get --pin 8</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-restart">4.4 <code>restart</code><a href="#44-restart" class="hash-link" aria-label="Direct link to 44-restart" title="Direct link to 44-restart" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Triggers a software-controlled hardware reboot of the gateway.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--mode</code> / <code>-m</code> (Optional, String): Boot mode override before rebooting (<code>&quot;configure&quot;</code>, <code>&quot;normal&quot;</code>, or <code>&quot;ota&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;System will restart soon... Please wait!&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd restart --mode &quot;configure&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="45-factory-reset">4.5 <code>factory-reset</code><a href="#45-factory-reset" class="hash-link" aria-label="Direct link to 45-factory-reset" title="Direct link to 45-factory-reset" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Performs a complete factory wipe of all user configurations (passwords, Wi-Fi credentials, AP keys, UART baud rate, channel routes), restores out-of-box Configure Mode, and reboots.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Factory reset initiated. Rebooting...&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd factory-reset</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="46-confirm">4.6 <code>confirm</code><a href="#46-confirm" class="hash-link" aria-label="Direct link to 46-confirm" title="Direct link to 46-confirm" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Signals user confirmation to unblock a waiting background task (such as legacy BLE pairing).</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--option</code> / <code>-o</code> (Required, String): Decision (<code>&quot;OK&quot;</code> or <code>&quot;Cancel&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd confirm --option &quot;OK&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="47-setting-uart">4.7 <code>setting-uart</code><a href="#47-setting-uart" class="hash-link" aria-label="Direct link to 47-setting-uart" title="Direct link to 47-setting-uart" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Applies custom serial configurations dynamically to UART1 and persists them to NVS.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--baud_rate</code> / <code>-b</code> (Optional, Integer): Baud rate (<code>9600</code>, <code>19200</code>, <code>38400</code>, <code>57600</code>, <code>115200</code>, <code>230400</code>, <code>921600</code>).</li>
+<li class=""><code>--data_bits</code> / <code>-d</code> (Optional, Integer): Data bits (<code>5</code>, <code>6</code>, <code>7</code>, <code>8</code>, <code>9</code>).</li>
+<li class=""><code>--parity</code> / <code>-p</code> (Optional, String): Parity mode (<code>&quot;disable&quot;</code>, <code>&quot;even&quot;</code>, <code>&quot;odd&quot;</code>).</li>
+<li class=""><code>--stop_bits</code> / <code>-s</code> (Optional, String): Stop bits (<code>&quot;1&quot;</code>, <code>&quot;1.5&quot;</code>, <code>&quot;2&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;UART setting done successfully!&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd setting-uart --baud_rate 115200 --data_bits 8 --parity &quot;disable&quot; --stop_bits &quot;1&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="48-get-setting-uart">4.8 <code>get-setting-uart</code><a href="#48-get-setting-uart" class="hash-link" aria-label="Direct link to 48-get-setting-uart" title="Direct link to 48-get-setting-uart" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the active physical UART1 settings from registers (snapped to standard nominal rates).</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Formatted string (e.g., <code>&quot;baudrate: 115200, databits: 8, parity: disable, stopbits: 1&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-setting-uart</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="49-uart-water-mark">4.9 <code>uart-water-mark</code><a href="#49-uart-water-mark" class="hash-link" aria-label="Direct link to 49-uart-water-mark" title="Direct link to 49-uart-water-mark" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the stack high watermark remaining bytes for the background UART listener thread.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> High watermark value in bytes (e.g., <code>&quot;3500&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd uart-water-mark</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="410-uart-send">4.10 <code>uart-send</code><a href="#410-uart-send" class="hash-link" aria-label="Direct link to 410-uart-send" title="Direct link to 410-uart-send" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Transmits a raw byte array directly across physical UART1 lines.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--content</code> / <code>-c</code> (Required, String): Text string or payload to transmit.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> The transmitted string.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd uart-send --content &quot;Hello Host MCU&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="411-disable-uart">4.11 <code>disable-uart</code><a href="#411-disable-uart" class="hash-link" aria-label="Direct link to 411-disable-uart" title="Direct link to 411-disable-uart" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Uninstalls and de-initializes the physical UART1 peripheral drivers.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd disable-uart</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="412-debug-mode">4.12 <code>debug-mode</code><a href="#412-debug-mode" class="hash-link" aria-label="Direct link to 412-debug-mode" title="Direct link to 412-debug-mode" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Switches the gateway into Debug Mode, activating diagnostic logging and memory auditing.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd debug-mode</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="413-production-mode">4.13 <code>production-mode</code><a href="#413-production-mode" class="hash-link" aria-label="Direct link to 413-production-mode" title="Direct link to 413-production-mode" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Switches the gateway into Production Mode, silencing diagnostic logs to maximize processing speed.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd production-mode</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="414-set-global-ack-timeout">4.14 <code>set-global-ack-timeout</code><a href="#414-set-global-ack-timeout" class="hash-link" aria-label="Direct link to 414-set-global-ack-timeout" title="Direct link to 414-set-global-ack-timeout" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Configures the global default flow-control ACK wait timeout limit across all streaming interfaces.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--timeout</code> / <code>-t</code> (Required, Integer): Timeout limit in milliseconds (100 ms to 60000 ms).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Global ACK timeout set to &lt;ms&gt; ms&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-global-ack-timeout --timeout 10000</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="415-get-global-ack-timeout">4.15 <code>get-global-ack-timeout</code><a href="#415-get-global-ack-timeout" class="hash-link" aria-label="Direct link to 415-get-global-ack-timeout" title="Direct link to 415-get-global-ack-timeout" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the currently active global flow-control ACK wait timeout from persistent storage.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Formatted string (e.g., <code>&quot;5000 ms&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-global-ack-timeout</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="416-set-fs-bridge-channel">4.16 <code>set-fs-bridge-channel</code><a href="#416-set-fs-bridge-channel" class="hash-link" aria-label="Direct link to 416-set-fs-bridge-channel" title="Direct link to 416-set-fs-bridge-channel" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Selects the physical hardware transport channel used by the Web Dashboard to bridge file operations and web plugins.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--channel</code> / <code>-c</code> (Required, String): Target channel (<code>&quot;UART1&quot;</code> or <code>&quot;SPI1&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;File Explorer channel set to &#x27;&lt;channel&gt;&#x27;&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-fs-bridge-channel --channel &quot;SPI1&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="417-get-fs-bridge-channel">4.17 <code>get-fs-bridge-channel</code><a href="#417-get-fs-bridge-channel" class="hash-link" aria-label="Direct link to 417-get-fs-bridge-channel" title="Direct link to 417-get-fs-bridge-channel" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the currently configured hardware channel used for Host MCU bridging.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Channel identifier string (<code>&quot;UART1&quot;</code> or <code>&quot;SPI1&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-fs-bridge-channel</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="418-start-spi">4.18 <code>start-spi</code><a href="#418-start-spi" class="hash-link" aria-label="Direct link to 418-start-spi" title="Direct link to 418-start-spi" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Initializes and starts the high-speed SPI1 Slave listener thread on demand.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;SPI1 listener started.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd start-spi</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="419-disable-spi">4.19 <code>disable-spi</code><a href="#419-disable-spi" class="hash-link" aria-label="Direct link to 419-disable-spi" title="Direct link to 419-disable-spi" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Stops the high-speed SPI1 Slave listener thread and frees DMA buffers back to internal SRAM.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;SPI1 listener stopped.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd disable-spi</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-security-authentication--licensing-commands">5. Security, Authentication &amp; Licensing Commands<a href="#5-security-authentication--licensing-commands" class="hash-link" aria-label="Direct link to 5. Security, Authentication &amp; Licensing Commands" title="Direct link to 5. Security, Authentication &amp; Licensing Commands" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="51-login">5.1 <code>login</code><a href="#51-login" class="hash-link" aria-label="Direct link to 51-login" title="Direct link to 51-login" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Authenticates administrator credentials. When executed over physical UART1 or SPI1, permanently unlocks the stateful hardware bus session. When executed over wireless/network interfaces, returns a 44-character Base64 Access Token.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--username</code> / <code>-u</code> (Required, String): Administrator username (default: <code>&quot;admin&quot;</code>).</li>
+<li class=""><code>--password</code> / <code>-p</code> (Required, String): Administrator password (default: <code>&quot;admin&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> 44-character Base64 Access Token string.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd login --username &quot;admin&quot; --password &quot;admin&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="52-verify-token">5.2 <code>verify-token</code><a href="#52-verify-token" class="hash-link" aria-label="Direct link to 52-verify-token" title="Direct link to 52-verify-token" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Verifies whether a 44-character Access Token is currently valid in gateway memory.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--token</code> / <code>-t</code> (Required, String): Access token string to verify.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Valid token.&quot;</code> on success.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd verify-token --token &quot;p7mQC4o6daZhRPTKvlkcbgZQUhJ5lSPj8Leq1ByzBM8=&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="53-set-password">5.3 <code>set-password</code><a href="#53-set-password" class="hash-link" aria-label="Direct link to 53-set-password" title="Direct link to 53-set-password" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Configures a custom administrator password in persistent NVS storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--password</code> / <code>-p</code> (Required, String): New administrator password.</li>
+<li class=""><code>--confirm_password</code> / <code>-c</code> (Required, String): Confirmation matching password.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;password set successfully!&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-password -p &quot;Secret123&quot; -c &quot;Secret123&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="54-get-password">5.4 <code>get-password</code><a href="#54-get-password" class="hash-link" aria-label="Direct link to 54-get-password" title="Direct link to 54-get-password" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the currently active administrator password from persistent NVS storage.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Password string.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-password</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="55-delete-password">5.5 <code>delete-password</code><a href="#55-delete-password" class="hash-link" aria-label="Direct link to 55-delete-password" title="Direct link to 55-delete-password" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Erases the custom administrator password, resetting it back to factory default <code>&quot;admin&quot;</code>.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Delete password successfully!&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd delete-password</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="56-set-credentials">5.6 <code>set-credentials</code><a href="#56-set-credentials" class="hash-link" aria-label="Direct link to 56-set-credentials" title="Direct link to 56-set-credentials" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Atomically updates both the administrator username and password in persistent storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--new_user</code> (Required, String): New administrator username.</li>
+<li class=""><code>--old_pass</code> (Required, String): Current password for authorization.</li>
+<li class=""><code>--new_pass</code> (Required, String): New administrator password.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Credentials updated successfully! Please re-login.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-credentials --new_user &quot;operator&quot; --old_pass &quot;admin&quot; --new_pass &quot;Pass1234!&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="57-activate-license">5.7 <code>activate-license</code><a href="#57-activate-license" class="hash-link" aria-label="Direct link to 57-activate-license" title="Direct link to 57-activate-license" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Connects to the official GitHub raw repository, streams the device code catalogs, downloads the signature, validates authenticity, and registers the license key permanently.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd activate-license</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="58-check-license">5.8 <code>check-license</code><a href="#58-check-license" class="hash-link" aria-label="Direct link to 58-check-license" title="Direct link to 58-check-license" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries persistent storage to verify if the gateway holds a valid cryptographic activation key.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code> if activated, error frame otherwise.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd check-license</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-wireless--audio-communication-commands">6. Wireless &amp; Audio Communication Commands<a href="#6-wireless--audio-communication-commands" class="hash-link" aria-label="Direct link to 6. Wireless &amp; Audio Communication Commands" title="Direct link to 6. Wireless &amp; Audio Communication Commands" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="61-set-ap-password">6.1 <code>set-ap-password</code><a href="#61-set-ap-password" class="hash-link" aria-label="Direct link to 61-set-ap-password" title="Direct link to 61-set-ap-password" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Sets the WPA2 passphrase for the gateway&#x27;s SoftAP configuration hotspot.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--password</code> / <code>-p</code> (Required, String): Hotspot password (≥ 8 characters).</li>
+<li class=""><code>--confirm_password</code> / <code>-c</code> (Required, String): Confirmation password.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Access point password set successfully!&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-ap-password -p &quot;12345678&quot; -c &quot;12345678&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="62-get-ap-password">6.2 <code>get-ap-password</code><a href="#62-get-ap-password" class="hash-link" aria-label="Direct link to 62-get-ap-password" title="Direct link to 62-get-ap-password" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the active SoftAP WPA2 password from persistent storage.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Passphrase string.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-ap-password</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="63-delete-ap-password">6.3 <code>delete-ap-password</code><a href="#63-delete-ap-password" class="hash-link" aria-label="Direct link to 63-delete-ap-password" title="Direct link to 63-delete-ap-password" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Erases the custom SoftAP password, resetting it back to the unique hardware device code.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd delete-ap-password</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="64-start-access-point">6.4 <code>start-access-point</code><a href="#64-start-access-point" class="hash-link" aria-label="Direct link to 64-start-access-point" title="Direct link to 64-start-access-point" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Initializes and launches the local SoftAP configuration hotspot on IP <code>192.168.4.1</code>.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd start-access-point</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="65-start-ble">6.5 <code>start-ble</code><a href="#65-start-ble" class="hash-link" aria-label="Direct link to 65-start-ble" title="Direct link to 65-start-ble" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Powers on the Bluetooth LE controller and begins advertising.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Start BLE done&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd start-ble</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="66-disable-ble">6.6 <code>disable-ble</code><a href="#66-disable-ble" class="hash-link" aria-label="Direct link to 66-disable-ble" title="Direct link to 66-disable-ble" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Shuts down the Bluetooth LE stack and reclaims memory.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Disable BLE done&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd disable-ble</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="67-set-wifi">6.7 <code>set-wifi</code><a href="#67-set-wifi" class="hash-link" aria-label="Direct link to 67-set-wifi" title="Direct link to 67-set-wifi" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Connects the gateway Station interface to an external Wi-Fi router, saves credentials to NVS, and optionally triggers online cryptographic activation upon connection.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--ssid</code> / <code>-s</code> (Required, String): Router network SSID.</li>
+<li class=""><code>--password</code> / <code>-p</code> (Required, String): Router WPA2/WPA3 password.</li>
+<li class=""><code>--activate</code> / <code>-a</code> (Optional, Boolean): If <code>true</code>, automatically executes online activation immediately upon connection.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Connect wifi successfully.&quot;</code> or <code>&quot;Wi-Fi connected and license activated successfully!&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-wifi --ssid &quot;MyRouter&quot; --password &quot;MyPassword&quot; --activate true</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="68-restore-wifi">6.8 <code>restore-wifi</code><a href="#68-restore-wifi" class="hash-link" aria-label="Direct link to 68-restore-wifi" title="Direct link to 68-restore-wifi" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Re-establishes a Wi-Fi connection using previously saved NVS credentials. Provides clear diagnostic feedback if credentials have never been saved or if the router is unreachable.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Restore wifi connection to &#x27;&lt;SSID&gt;&#x27; successfully!&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd restore-wifi</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="69-wifi-status">6.9 <code>wifi-status</code><a href="#69-wifi-status" class="hash-link" aria-label="Direct link to 69-wifi-status" title="Direct link to 69-wifi-status" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries whether the Wi-Fi Station interface is currently connected to an access point.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code> (Connected) or <code>&quot;NG&quot;</code> (Disconnected).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd wifi-status</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="610-wifi-info">6.10 <code>wifi-info</code><a href="#610-wifi-info" class="hash-link" aria-label="Direct link to 610-wifi-info" title="Direct link to 610-wifi-info" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the saved router SSID and password currently stored in NVS.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Formatted string (e.g., <code>&quot;ssid = &#x27;MyRouter&#x27;, password = &#x27;***&#x27;&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd wifi-info</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="611-get-ip">6.11 <code>get-ip</code><a href="#611-get-ip" class="hash-link" aria-label="Direct link to 611-get-ip" title="Direct link to 611-get-ip" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the active IPv4 address assigned to the gateway.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> IPv4 address string (e.g., <code>&quot;192.168.1.100&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-ip</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="612-scan-wifi">6.12 <code>scan-wifi</code><a href="#612-scan-wifi" class="hash-link" aria-label="Direct link to 612-scan-wifi" title="Direct link to 612-scan-wifi" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Returns discovered Wi-Fi access points. Returns pre-cached boot scan results instantly or forces an active live channel scan.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--force</code> / <code>-f</code> (Optional, Boolean): If <code>true</code>, bypasses cache and performs an immediate live channel scan.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> Comma-separated list of discovered network SSIDs.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd scan-wifi --force true</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="613-disable-wifi">6.13 <code>disable-wifi</code><a href="#613-disable-wifi" class="hash-link" aria-label="Direct link to 613-disable-wifi" title="Direct link to 613-disable-wifi" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Disconnects and stops the physical Wi-Fi controller.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd disable-wifi</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="614-bt-connect">6.14 <code>bt-connect</code><a href="#614-bt-connect" class="hash-link" aria-label="Direct link to 614-bt-connect" title="Direct link to 614-bt-connect" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Scans and connects to an external Bluetooth LE audio speaker.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--name</code> / <code>-n</code> (Required, String): Target speaker name or MAC address.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd bt-connect -n &quot;SRS-XB23&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="615-bt-disconnect">6.15 <code>bt-disconnect</code><a href="#615-bt-disconnect" class="hash-link" aria-label="Direct link to 615-bt-disconnect" title="Direct link to 615-bt-disconnect" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Terminates the active Bluetooth speaker connection.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Disconnected from Bluetooth speaker.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd bt-disconnect</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="616-bt-speak">6.16 <code>bt-speak</code><a href="#616-bt-speak" class="hash-link" aria-label="Direct link to 616-bt-speak" title="Direct link to 616-bt-speak" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Synthesizes text into speech and streams audio directly to the connected Bluetooth speaker.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--text</code> / <code>-t</code> (Required, String): Text sentence to synthesize.</li>
+<li class=""><code>--mode</code> / <code>-m</code> (Optional, String): Synthesis mode (<code>&quot;cloud&quot;</code> for high-fidelity TTS, or <code>&quot;offline&quot;</code> for offline speech synthesis).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd bt-speak -t &quot;System Online&quot; -m &quot;cloud&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="617-bt-volume">6.17 <code>bt-volume</code><a href="#617-bt-volume" class="hash-link" aria-label="Direct link to 617-bt-volume" title="Direct link to 617-bt-volume" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Sets the volume of the connected Bluetooth speaker.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--level</code> / <code>-l</code> (Required, Integer): Volume level from <code>0</code> (Mute) to <code>100</code> (Max).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd bt-volume -l 80</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="618-bt-read-battery">6.18 <code>bt-read-battery</code><a href="#618-bt-read-battery" class="hash-link" aria-label="Direct link to 618-bt-read-battery" title="Direct link to 618-bt-read-battery" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the battery percentage of the connected Bluetooth speaker via GATT characteristic <code>0x2A19</code>.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Battery percentage string (e.g., <code>&quot;Speaker Battery Level: 85%&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd bt-read-battery</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-network-protocols--web-server-commands">7. Network Protocols &amp; Web Server Commands<a href="#7-network-protocols--web-server-commands" class="hash-link" aria-label="Direct link to 7. Network Protocols &amp; Web Server Commands" title="Direct link to 7. Network Protocols &amp; Web Server Commands" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="71-http">7.1 <code>http</code><a href="#71-http" class="hash-link" aria-label="Direct link to 71-http" title="Direct link to 71-http" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Sends an outbound HTTP/HTTPS request directly to a target web server. Automatically streams responses via Stream Protocol V2, handles custom headers, and auto-restores Wi-Fi if dropped.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--url</code> (Required, String): Full destination URL.</li>
+<li class=""><code>--method</code> (Optional, String): Request method (<code>&quot;GET&quot;</code>, <code>&quot;POST&quot;</code>, <code>&quot;HEAD&quot;</code>). Default: <code>&quot;GET&quot;</code>.</li>
+<li class=""><code>--body</code> (Optional, String): Request body payload (e.g., JSON string).</li>
+<li class=""><code>--header</code> / <code>-h</code> (Optional, Multi-Argument): Custom HTTP header (can be specified up to 30 times).</li>
+</ul>
+</li>
+<li class=""><strong>CLI Syntax Examples:</strong>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">cmd http --url &quot;https://reqbin.com/echo&quot; --method GET</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"># Multiple headers &amp; JSON body:</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">cmd http --method POST --url &quot;http://192.168.1.50/api/data&quot; \</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  --header &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  --header &quot;Accept: application/json&quot; \</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">  --body &quot;{\&quot;status\&quot;:\&quot;active\&quot;}&quot;</span><br></div></code></pre></div></div>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="72-http-download">7.2 <code>http-download</code><a href="#72-http-download" class="hash-link" aria-label="Direct link to 72-http-download" title="Direct link to 72-http-download" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Downloads a file from an authenticated HTTP/HTTPS server and streams it to storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--url</code> (Required, String): Target download URL.</li>
+<li class=""><code>--filename</code> (Optional, String): Destination filename override.</li>
+<li class=""><code>--header</code> (Optional, String): Authentication or custom header. Supports multiple <code>--header</code> flags.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;File download successfully!&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd http-download --url &quot;https://my-server.com/firmware.bin&quot; --filename &quot;fw.bin&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="73-set-http-default-header">7.3 <code>set-http-default-header</code><a href="#73-set-http-default-header" class="hash-link" aria-label="Direct link to 73-set-http-default-header" title="Direct link to 73-set-http-default-header" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Saves a default HTTP header globally in memory to be automatically attached to all subsequent outbound HTTP requests.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--header</code> / <code>-h</code> (Required, String): Raw header string (e.g., <code>&quot;Authorization: Bearer &lt;tok&gt;&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-http-default-header --header &quot;Authorization: Bearer my_jwt_token&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="74-delete-all-http-default-header">7.4 <code>delete-all-http-default-header</code><a href="#74-delete-all-http-default-header" class="hash-link" aria-label="Direct link to 74-delete-all-http-default-header" title="Direct link to 74-delete-all-http-default-header" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Clears all globally saved default HTTP headers from memory.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd delete-all-http-default-header</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="75-ws-start">7.5 <code>ws-start</code><a href="#75-ws-start" class="hash-link" aria-label="Direct link to 75-ws-start" title="Direct link to 75-ws-start" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Connects to an external WebSocket server.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--url</code> / <code>-u</code> (Required, String): WebSocket URI (e.g., <code>&quot;ws://192.168.1.50:8080/ws&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd ws-start --url &quot;ws://192.168.1.50:8080/ws&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="76-ws-send">7.6 <code>ws-send</code><a href="#76-ws-send" class="hash-link" aria-label="Direct link to 76-ws-send" title="Direct link to 76-ws-send" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Transmits a text frame across the active outbound WebSocket connection.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--content</code> / <code>-c</code> (Required, String): String packet to send.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd ws-send --content &quot;Hello Server&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="77-ws-stop">7.7 <code>ws-stop</code><a href="#77-ws-stop" class="hash-link" aria-label="Direct link to 77-ws-stop" title="Direct link to 77-ws-stop" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Closes the active outbound WebSocket connection.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd ws-stop</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="78-start-web-server">7.8 <code>start-web-server</code><a href="#78-start-web-server" class="hash-link" aria-label="Direct link to 78-start-web-server" title="Direct link to 78-start-web-server" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Starts the complete Web Dashboard stack (REST API, mDNS hostname, and WebSocket server). In Normal Mode, validates that Wi-Fi is actively connected before starting. Returns the accessible URL.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Accessible URLs (e.g., <code>&quot;http://mgw-18a93114.local/ (http://192.168.0.124/)&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd start-web-server</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="79-get-web-address">7.9 <code>get-web-address</code><a href="#79-get-web-address" class="hash-link" aria-label="Direct link to 79-get-web-address" title="Direct link to 79-get-web-address" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the active URL of the running MGW Web Dashboard. Returns an error if the server is offline or if Wi-Fi has disconnected.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Active URL string (e.g., <code>&quot;http://mgw-18a93114.local/ (http://192.168.0.124/)&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-web-address</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="710-send-all-clients">7.10 <code>send-all-clients</code><a href="#710-send-all-clients" class="hash-link" aria-label="Direct link to 710-send-all-clients" title="Direct link to 710-send-all-clients" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Broadcasts a WebSocket text frame to all connected browser dashboards.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--content</code> / <code>-c</code> (Required, String): Message string to broadcast.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> The broadcasted string.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd send-all-clients --content &quot;Sensor Alert: Threshold Exceeded&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="711-update-firmware">7.11 <code>update-firmware</code><a href="#711-update-firmware" class="hash-link" aria-label="Direct link to 711-update-firmware" title="Direct link to 711-update-firmware" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Saves firmware update parameters to NVS, sets boot mode to OTA, and restarts to download and flash new firmware safely.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--url</code> / <code>-u</code> (Optional, String): URL of target binary. Defaults to official release catalog if omitted.</li>
+<li class=""><code>--header</code> / <code>-h</code> (Optional, String): Custom authentication header for private OTA servers. Supports multiple <code>--header</code> flags.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;System entering OTA mode. Restarting...&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd update-firmware --url &quot;https://my-server.com/fw.bin&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="712-get-firmware-list">7.12 <code>get-firmware-list</code><a href="#712-get-firmware-list" class="hash-link" aria-label="Direct link to 712-get-firmware-list" title="Direct link to 712-get-firmware-list" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Downloads and returns the available firmware release catalog.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Raw JSON array string.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-firmware-list</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="713-fs-list">7.13 <code>fs-list</code><a href="#713-fs-list" class="hash-link" aria-label="Direct link to 713-fs-list" title="Direct link to 713-fs-list" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries directory entries from Host MCU storage across the configured bridge channel (<code>UART1</code> or <code>SPI1</code>).</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--path</code> / <code>-p</code> (Optional, String): Directory path (default: <code>&quot;/&quot;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> Stream Protocol V2 NDJSON file list chunks.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd fs-list --path &quot;/logs&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="714-fs-read">7.14 <code>fs-read</code><a href="#714-fs-read" class="hash-link" aria-label="Direct link to 714-fs-read" title="Direct link to 714-fs-read" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Reads a file from Host MCU storage and streams it in chunks.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--path</code> / <code>-p</code> (Required, String): File path to stream.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> Stream Protocol V2 binary payload slices.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd fs-read --path &quot;/logs/sensor.csv&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="715-fs-delete">7.15 <code>fs-delete</code><a href="#715-fs-delete" class="hash-link" aria-label="Direct link to 715-fs-delete" title="Direct link to 715-fs-delete" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Deletes a file or directory from Host MCU storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--path</code> / <code>-p</code> (Required, String): Target path to delete.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd fs-delete --path &quot;/logs/old.log&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="716-fs-mkdir">7.16 <code>fs-mkdir</code><a href="#716-fs-mkdir" class="hash-link" aria-label="Direct link to 716-fs-mkdir" title="Direct link to 716-fs-mkdir" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Creates a directory on Host MCU storage.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--path</code> / <code>-p</code> (Required, String): Directory path to create.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd fs-mkdir --path &quot;/logs/2026&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="717-ftp-start">7.17 <code>ftp-start</code><a href="#717-ftp-start" class="hash-link" aria-label="Direct link to 717-ftp-start" title="Direct link to 717-ftp-start" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Starts the background RFC 959 passive mode FTP server daemon.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--port</code> / <code>-p</code> (Optional, Integer): TCP port to listen on (default: <code>21</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;FTP server started on port &lt;port&gt;.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd ftp-start --port 21</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="718-ftp-stop">7.18 <code>ftp-stop</code><a href="#718-ftp-stop" class="hash-link" aria-label="Direct link to 718-ftp-stop" title="Direct link to 718-ftp-stop" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Stops the active FTP server daemon and closes client sockets.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;FTP server stopped.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd ftp-stop</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="719-ftp-status">7.19 <code>ftp-status</code><a href="#719-ftp-status" class="hash-link" aria-label="Direct link to 719-ftp-status" title="Direct link to 719-ftp-status" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries whether the native FTP daemon is actively running.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;RUNNING&quot;</code> or <code>&quot;STOPPED&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd ftp-status</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-signalr-cloud-integration-commands">8. SignalR Cloud Integration Commands<a href="#8-signalr-cloud-integration-commands" class="hash-link" aria-label="Direct link to 8. SignalR Cloud Integration Commands" title="Direct link to 8. SignalR Cloud Integration Commands" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="81-signalr-start">8.1 <code>signalr-start</code><a href="#81-signalr-start" class="hash-link" aria-label="Direct link to 81-signalr-start" title="Direct link to 81-signalr-start" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Connects to an ASP.NET Core SignalR Hub over WebSockets, completes the JSON v1 negotiation handshake (<code>{&quot;protocol&quot;:&quot;json&quot;,&quot;version&quot;:1}\x1E</code>), and starts background listening.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--url</code> / <code>-u</code> (Required, String): SignalR Hub WebSocket URI.</li>
+<li class=""><code>--token</code> / <code>-t</code> (Optional, String): JWT Access Token string.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Connected to SignalR Hub successfully: &#x27;&lt;url&gt;&#x27;&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd signalr-start --url &quot;ws://192.168.1.50:45455/chathub&quot; --token &quot;eyJhbGciOi...&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="82-signalr-invoke">8.2 <code>signalr-invoke</code><a href="#82-signalr-invoke" class="hash-link" aria-label="Direct link to 82-signalr-invoke" title="Direct link to 82-signalr-invoke" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Invokes a Remote Procedure Call (RPC) method on the connected SignalR Hub.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--method</code> / <code>-m</code> (Required, String): Target hub method name.</li>
+<li class=""><code>--args</code> / <code>-a</code> (Optional, String): JSON array of arguments (e.g., <code>&#x27;[&quot;User&quot;,&quot;Message&quot;]&#x27;</code>).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;SignalR method &#x27;&lt;method&gt;&#x27; invoked successfully.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd signalr-invoke --method &quot;sendToAll&quot; --args &quot;[\&quot;MGW-01\&quot;,\&quot;Online\&quot;]&quot;</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="83-signalr-status">8.3 <code>signalr-status</code><a href="#83-signalr-status" class="hash-link" aria-label="Direct link to 83-signalr-status" title="Direct link to 83-signalr-status" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries whether the SignalR client is actively connected and handshaked.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code> (Connected) or <code>&quot;NG&quot;</code> (Disconnected).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd signalr-status</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="84-signalr-stop">8.4 <code>signalr-stop</code><a href="#84-signalr-stop" class="hash-link" aria-label="Direct link to 84-signalr-stop" title="Direct link to 84-signalr-stop" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Gracefully terminates the active SignalR Hub session.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;SignalR Hub disconnected successfully.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd signalr-stop</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-dynamic-web-plugin--host-mcu-state-synchronization-commands">9. Dynamic Web Plugin &amp; Host MCU State Synchronization Commands<a href="#9-dynamic-web-plugin--host-mcu-state-synchronization-commands" class="hash-link" aria-label="Direct link to 9. Dynamic Web Plugin &amp; Host MCU State Synchronization Commands" title="Direct link to 9. Dynamic Web Plugin &amp; Host MCU State Synchronization Commands" translate="no">​</a></h2>
+<p>Allows Host MCUs (STM32, NXP) to inject their own HTML5/JS control panels directly into the MGW Web Dashboard and synchronize UI states.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="91-register-web-plugin">9.1 <code>register-web-plugin</code><a href="#91-register-web-plugin" class="hash-link" aria-label="Direct link to 91-register-web-plugin" title="Direct link to 91-register-web-plugin" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Registers a Host MCU web application with the gateway. Triggers a live WebSocket broadcast to dynamically add the item to the dashboard sidebar menu in real time without refreshing the page.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--name</code> / <code>-n</code> (Required, String): Unique plugin key (lowercase alphanumeric, e.g., <code>&quot;motor-ctrl&quot;</code>).</li>
+<li class=""><code>--title</code> / <code>-t</code> (Required, String): Display title in the dashboard menu.</li>
+<li class=""><code>--icon</code> / <code>-i</code> (Optional, String): SVG micro-icon name (<code>&quot;motor&quot;</code>, <code>&quot;gauge&quot;</code>, <code>&quot;chart&quot;</code>, <code>&quot;power&quot;</code>, <code>&quot;sensor&quot;</code>, <code>&quot;cpu&quot;</code>, <code>&quot;tool&quot;</code>). Default: <code>&quot;plugin&quot;</code>.</li>
+<li class=""><code>--size</code> / <code>-s</code> (Optional, Integer): Expected size in bytes of the single HTML bundle.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Plugin &#x27;&lt;name&gt;&#x27; registered successfully.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd register-web-plugin -n motor-ctrl -t &quot;Motor Controller&quot; -i &quot;motor&quot; --size 32768</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="92-unregister-web-plugin">9.2 <code>unregister-web-plugin</code><a href="#92-unregister-web-plugin" class="hash-link" aria-label="Direct link to 92-unregister-web-plugin" title="Direct link to 92-unregister-web-plugin" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Removes an active web plugin and broadcasts a live deletion update to all connected browser dashboards.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--name</code> / <code>-n</code> (Required, String): Plugin key to unregister.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Plugin unregistered.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd unregister-web-plugin -n motor-ctrl</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="93-list-web-plugins">9.3 <code>list-web-plugins</code><a href="#93-list-web-plugins" class="hash-link" aria-label="Direct link to 93-list-web-plugins" title="Direct link to 93-list-web-plugins" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Lists all currently registered Host MCU web plugins.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Formatted multi-line text list showing index, name, title, icon, and size.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd list-web-plugins</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="94-set-max-plugin-size">9.4 <code>set-max-plugin-size</code><a href="#94-set-max-plugin-size" class="hash-link" aria-label="Direct link to 94-set-max-plugin-size" title="Direct link to 94-set-max-plugin-size" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Configures the maximum allowed size ceiling for Host MCU web plugin HTML bundles and saves it to persistent storage (<code>plugin_max_sz</code>).</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--size</code> / <code>-s</code> (Required, Integer): Maximum size in bytes (e.g., <code>1048576</code> for 1MB).</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;Max plugin size set to &lt;bytes&gt; bytes.&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd set-max-plugin-size --size 1048576</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="95-get-max-plugin-size">9.5 <code>get-max-plugin-size</code><a href="#95-get-max-plugin-size" class="hash-link" aria-label="Direct link to 95-get-max-plugin-size" title="Direct link to 95-get-max-plugin-size" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the active maximum allowed size ceiling for web plugin bundles from persistent storage.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> Formatted string (e.g., <code>&quot;1048576 bytes (1024 KB)&quot;</code>).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-max-plugin-size</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="96-is-plugin-visible">9.6 <code>is-plugin-visible</code><a href="#96-is-plugin-visible" class="hash-link" aria-label="Direct link to 96-is-plugin-visible" title="Direct link to 96-is-plugin-visible" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries whether a specific plugin is currently visible on the user&#x27;s active browser screen. Allows the Host MCU to pause heavy telemetry streaming and enter low-power sleep when the user navigates away.</li>
+<li class=""><strong>Parameters:</strong>
+<ul>
+<li class=""><code>--name</code> / <code>-n</code> (Required, String): Plugin key to query.</li>
+</ul>
+</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;true&quot;</code> (dashboard open on this plugin) or <code>&quot;false&quot;</code> (closed or viewing another panel).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd is-plugin-visible -n motor-ctrl</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="97-get-active-view">9.7 <code>get-active-view</code><a href="#97-get-active-view" class="hash-link" aria-label="Direct link to 97-get-active-view" title="Direct link to 97-get-active-view" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries the exact menu item or plugin currently visible on the active Web Dashboard.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> View identifier string: <code>&quot;plugin:&lt;name&gt;&quot;</code>, <code>&quot;p1&quot;</code>, <code>&quot;p2&quot;</code>, <code>&quot;p3&quot;</code>, <code>&quot;p4&quot;</code>, <code>&quot;p5&quot;</code>, <code>&quot;p6&quot;</code>, or <code>&quot;none&quot;</code> (dashboard closed).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-active-view</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="98-get-dashboard-status">9.8 <code>get-dashboard-status</code><a href="#98-get-dashboard-status" class="hash-link" aria-label="Direct link to 98-get-dashboard-status" title="Direct link to 98-get-dashboard-status" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Queries whether any browser is actively connected to the Web Dashboard. Automatically detects window closure via beacons and 6-second heartbeat expiration.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;ONLINE&quot;</code> (active browser connected) or <code>&quot;OFFLINE&quot;</code> (all browser tabs closed).</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd get-dashboard-status</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-memory-diagnostics--auditing-commands">10. Memory Diagnostics &amp; Auditing Commands<a href="#10-memory-diagnostics--auditing-commands" class="hash-link" aria-label="Direct link to 10. Memory Diagnostics &amp; Auditing Commands" title="Direct link to 10. Memory Diagnostics &amp; Auditing Commands" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="101-enable-memory-record">10.1 <code>enable-memory-record</code><a href="#101-enable-memory-record" class="hash-link" aria-label="Direct link to 101-enable-memory-record" title="Direct link to 101-enable-memory-record" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Enables dynamic memory allocation tracking and record auditing.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd enable-memory-record</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="102-disable-memory-record">10.2 <code>disable-memory-record</code><a href="#102-disable-memory-record" class="hash-link" aria-label="Direct link to 102-disable-memory-record" title="Direct link to 102-disable-memory-record" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Disables dynamic memory allocation tracking to optimize execution speed.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd disable-memory-record</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="103-audit-memory">10.3 <code>audit-memory</code><a href="#103-audit-memory" class="hash-link" aria-label="Direct link to 103-audit-memory" title="Direct link to 103-audit-memory" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Purpose:</strong> Triggers an immediate diagnostic audit of allocated memory structures.</li>
+<li class=""><strong>Parameters:</strong> None.</li>
+<li class=""><strong>Return Value:</strong> <code>&quot;OK&quot;</code>.</li>
+<li class=""><strong>CLI Syntax:</strong> <code>cmd audit-memory</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">Next Steps<a href="#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
+<ul>
+<li class="">Refer to the <strong>Communication Protocols</strong> guides for protocol timing and packet diagrams.</li>
+<li class="">Check the <strong><a class="" href="/iotgateway-docs/reference/error_codes">Error Codes Reference</a></strong> for troubleshooting failed command return frames.</li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/iotgateway-docs/cloud_and_advanced_features/web_file_explorer"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Web File Explorer</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/iotgateway-docs/reference/error_codes"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Error Codes Reference</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#general-rules" class="table-of-contents__link toc-highlight">General Rules:</a></li><li><a href="#1-universal-streaming-flags" class="table-of-contents__link toc-highlight">1. Universal Streaming Flags</a></li><li><a href="#2-platform-diagnostics--utility-commands" class="table-of-contents__link toc-highlight">2. Platform Diagnostics &amp; Utility Commands</a><ul><li><a href="#21-version" class="table-of-contents__link toc-highlight">2.1 <code>version</code></a></li><li><a href="#22-get-mac" class="table-of-contents__link toc-highlight">2.2 <code>get-mac</code></a></li><li><a href="#23-result-length" class="table-of-contents__link toc-highlight">2.3 <code>result-length</code></a></li><li><a href="#24-get-result" class="table-of-contents__link toc-highlight">2.4 <code>get-result</code></a></li><li><a href="#25-get-time" class="table-of-contents__link toc-highlight">2.5 <code>get-time</code></a></li><li><a href="#26-set-time" class="table-of-contents__link toc-highlight">2.6 <code>set-time</code></a></li><li><a href="#27-enable-log" class="table-of-contents__link toc-highlight">2.7 <code>enable-log</code></a></li><li><a href="#28-disable-log" class="table-of-contents__link toc-highlight">2.8 <code>disable-log</code></a></li><li><a href="#29-echo" class="table-of-contents__link toc-highlight">2.9 <code>echo</code></a></li></ul></li><li><a href="#3-storage--configuration-commands" class="table-of-contents__link toc-highlight">3. Storage &amp; Configuration Commands</a><ul><li><a href="#31-save-user-data" class="table-of-contents__link toc-highlight">3.1 <code>save-user-data</code></a></li><li><a href="#32-get-user-data" class="table-of-contents__link toc-highlight">3.2 <code>get-user-data</code></a></li><li><a href="#33-delete-user-data" class="table-of-contents__link toc-highlight">3.3 <code>delete-user-data</code></a></li><li><a href="#34-delete-all-user-data" class="table-of-contents__link toc-highlight">3.4 <code>delete-all-user-data</code></a></li><li><a href="#35-set-startup-mode" class="table-of-contents__link toc-highlight">3.5 <code>set-startup-mode</code></a></li><li><a href="#36-get-startup-mode" class="table-of-contents__link toc-highlight">3.6 <code>get-startup-mode</code></a></li><li><a href="#37-set-nvs" class="table-of-contents__link toc-highlight">3.7 <code>set-nvs</code></a></li><li><a href="#38-get-nvs" class="table-of-contents__link toc-highlight">3.8 <code>get-nvs</code></a></li><li><a href="#39-delete-nvs" class="table-of-contents__link toc-highlight">3.9 <code>delete-nvs</code></a></li></ul></li><li><a href="#4-peripherals--system-control-commands" class="table-of-contents__link toc-highlight">4. Peripherals &amp; System Control Commands</a><ul><li><a href="#41-gpio-config" class="table-of-contents__link toc-highlight">4.1 <code>gpio-config</code></a></li><li><a href="#42-gpio-set" class="table-of-contents__link toc-highlight">4.2 <code>gpio-set</code></a></li><li><a href="#43-gpio-get" class="table-of-contents__link toc-highlight">4.3 <code>gpio-get</code></a></li><li><a href="#44-restart" class="table-of-contents__link toc-highlight">4.4 <code>restart</code></a></li><li><a href="#45-factory-reset" class="table-of-contents__link toc-highlight">4.5 <code>factory-reset</code></a></li><li><a href="#46-confirm" class="table-of-contents__link toc-highlight">4.6 <code>confirm</code></a></li><li><a href="#47-setting-uart" class="table-of-contents__link toc-highlight">4.7 <code>setting-uart</code></a></li><li><a href="#48-get-setting-uart" class="table-of-contents__link toc-highlight">4.8 <code>get-setting-uart</code></a></li><li><a href="#49-uart-water-mark" class="table-of-contents__link toc-highlight">4.9 <code>uart-water-mark</code></a></li><li><a href="#410-uart-send" class="table-of-contents__link toc-highlight">4.10 <code>uart-send</code></a></li><li><a href="#411-disable-uart" class="table-of-contents__link toc-highlight">4.11 <code>disable-uart</code></a></li><li><a href="#412-debug-mode" class="table-of-contents__link toc-highlight">4.12 <code>debug-mode</code></a></li><li><a href="#413-production-mode" class="table-of-contents__link toc-highlight">4.13 <code>production-mode</code></a></li><li><a href="#414-set-global-ack-timeout" class="table-of-contents__link toc-highlight">4.14 <code>set-global-ack-timeout</code></a></li><li><a href="#415-get-global-ack-timeout" class="table-of-contents__link toc-highlight">4.15 <code>get-global-ack-timeout</code></a></li><li><a href="#416-set-fs-bridge-channel" class="table-of-contents__link toc-highlight">4.16 <code>set-fs-bridge-channel</code></a></li><li><a href="#417-get-fs-bridge-channel" class="table-of-contents__link toc-highlight">4.17 <code>get-fs-bridge-channel</code></a></li><li><a href="#418-start-spi" class="table-of-contents__link toc-highlight">4.18 <code>start-spi</code></a></li><li><a href="#419-disable-spi" class="table-of-contents__link toc-highlight">4.19 <code>disable-spi</code></a></li></ul></li><li><a href="#5-security-authentication--licensing-commands" class="table-of-contents__link toc-highlight">5. Security, Authentication &amp; Licensing Commands</a><ul><li><a href="#51-login" class="table-of-contents__link toc-highlight">5.1 <code>login</code></a></li><li><a href="#52-verify-token" class="table-of-contents__link toc-highlight">5.2 <code>verify-token</code></a></li><li><a href="#53-set-password" class="table-of-contents__link toc-highlight">5.3 <code>set-password</code></a></li><li><a href="#54-get-password" class="table-of-contents__link toc-highlight">5.4 <code>get-password</code></a></li><li><a href="#55-delete-password" class="table-of-contents__link toc-highlight">5.5 <code>delete-password</code></a></li><li><a href="#56-set-credentials" class="table-of-contents__link toc-highlight">5.6 <code>set-credentials</code></a></li><li><a href="#57-activate-license" class="table-of-contents__link toc-highlight">5.7 <code>activate-license</code></a></li><li><a href="#58-check-license" class="table-of-contents__link toc-highlight">5.8 <code>check-license</code></a></li></ul></li><li><a href="#6-wireless--audio-communication-commands" class="table-of-contents__link toc-highlight">6. Wireless &amp; Audio Communication Commands</a><ul><li><a href="#61-set-ap-password" class="table-of-contents__link toc-highlight">6.1 <code>set-ap-password</code></a></li><li><a href="#62-get-ap-password" class="table-of-contents__link toc-highlight">6.2 <code>get-ap-password</code></a></li><li><a href="#63-delete-ap-password" class="table-of-contents__link toc-highlight">6.3 <code>delete-ap-password</code></a></li><li><a href="#64-start-access-point" class="table-of-contents__link toc-highlight">6.4 <code>start-access-point</code></a></li><li><a href="#65-start-ble" class="table-of-contents__link toc-highlight">6.5 <code>start-ble</code></a></li><li><a href="#66-disable-ble" class="table-of-contents__link toc-highlight">6.6 <code>disable-ble</code></a></li><li><a href="#67-set-wifi" class="table-of-contents__link toc-highlight">6.7 <code>set-wifi</code></a></li><li><a href="#68-restore-wifi" class="table-of-contents__link toc-highlight">6.8 <code>restore-wifi</code></a></li><li><a href="#69-wifi-status" class="table-of-contents__link toc-highlight">6.9 <code>wifi-status</code></a></li><li><a href="#610-wifi-info" class="table-of-contents__link toc-highlight">6.10 <code>wifi-info</code></a></li><li><a href="#611-get-ip" class="table-of-contents__link toc-highlight">6.11 <code>get-ip</code></a></li><li><a href="#612-scan-wifi" class="table-of-contents__link toc-highlight">6.12 <code>scan-wifi</code></a></li><li><a href="#613-disable-wifi" class="table-of-contents__link toc-highlight">6.13 <code>disable-wifi</code></a></li><li><a href="#614-bt-connect" class="table-of-contents__link toc-highlight">6.14 <code>bt-connect</code></a></li><li><a href="#615-bt-disconnect" class="table-of-contents__link toc-highlight">6.15 <code>bt-disconnect</code></a></li><li><a href="#616-bt-speak" class="table-of-contents__link toc-highlight">6.16 <code>bt-speak</code></a></li><li><a href="#617-bt-volume" class="table-of-contents__link toc-highlight">6.17 <code>bt-volume</code></a></li><li><a href="#618-bt-read-battery" class="table-of-contents__link toc-highlight">6.18 <code>bt-read-battery</code></a></li></ul></li><li><a href="#7-network-protocols--web-server-commands" class="table-of-contents__link toc-highlight">7. Network Protocols &amp; Web Server Commands</a><ul><li><a href="#71-http" class="table-of-contents__link toc-highlight">7.1 <code>http</code></a></li><li><a href="#72-http-download" class="table-of-contents__link toc-highlight">7.2 <code>http-download</code></a></li><li><a href="#73-set-http-default-header" class="table-of-contents__link toc-highlight">7.3 <code>set-http-default-header</code></a></li><li><a href="#74-delete-all-http-default-header" class="table-of-contents__link toc-highlight">7.4 <code>delete-all-http-default-header</code></a></li><li><a href="#75-ws-start" class="table-of-contents__link toc-highlight">7.5 <code>ws-start</code></a></li><li><a href="#76-ws-send" class="table-of-contents__link toc-highlight">7.6 <code>ws-send</code></a></li><li><a href="#77-ws-stop" class="table-of-contents__link toc-highlight">7.7 <code>ws-stop</code></a></li><li><a href="#78-start-web-server" class="table-of-contents__link toc-highlight">7.8 <code>start-web-server</code></a></li><li><a href="#79-get-web-address" class="table-of-contents__link toc-highlight">7.9 <code>get-web-address</code></a></li><li><a href="#710-send-all-clients" class="table-of-contents__link toc-highlight">7.10 <code>send-all-clients</code></a></li><li><a href="#711-update-firmware" class="table-of-contents__link toc-highlight">7.11 <code>update-firmware</code></a></li><li><a href="#712-get-firmware-list" class="table-of-contents__link toc-highlight">7.12 <code>get-firmware-list</code></a></li><li><a href="#713-fs-list" class="table-of-contents__link toc-highlight">7.13 <code>fs-list</code></a></li><li><a href="#714-fs-read" class="table-of-contents__link toc-highlight">7.14 <code>fs-read</code></a></li><li><a href="#715-fs-delete" class="table-of-contents__link toc-highlight">7.15 <code>fs-delete</code></a></li><li><a href="#716-fs-mkdir" class="table-of-contents__link toc-highlight">7.16 <code>fs-mkdir</code></a></li><li><a href="#717-ftp-start" class="table-of-contents__link toc-highlight">7.17 <code>ftp-start</code></a></li><li><a href="#718-ftp-stop" class="table-of-contents__link toc-highlight">7.18 <code>ftp-stop</code></a></li><li><a href="#719-ftp-status" class="table-of-contents__link toc-highlight">7.19 <code>ftp-status</code></a></li></ul></li><li><a href="#8-signalr-cloud-integration-commands" class="table-of-contents__link toc-highlight">8. SignalR Cloud Integration Commands</a><ul><li><a href="#81-signalr-start" class="table-of-contents__link toc-highlight">8.1 <code>signalr-start</code></a></li><li><a href="#82-signalr-invoke" class="table-of-contents__link toc-highlight">8.2 <code>signalr-invoke</code></a></li><li><a href="#83-signalr-status" class="table-of-contents__link toc-highlight">8.3 <code>signalr-status</code></a></li><li><a href="#84-signalr-stop" class="table-of-contents__link toc-highlight">8.4 <code>signalr-stop</code></a></li></ul></li><li><a href="#9-dynamic-web-plugin--host-mcu-state-synchronization-commands" class="table-of-contents__link toc-highlight">9. Dynamic Web Plugin &amp; Host MCU State Synchronization Commands</a><ul><li><a href="#91-register-web-plugin" class="table-of-contents__link toc-highlight">9.1 <code>register-web-plugin</code></a></li><li><a href="#92-unregister-web-plugin" class="table-of-contents__link toc-highlight">9.2 <code>unregister-web-plugin</code></a></li><li><a href="#93-list-web-plugins" class="table-of-contents__link toc-highlight">9.3 <code>list-web-plugins</code></a></li><li><a href="#94-set-max-plugin-size" class="table-of-contents__link toc-highlight">9.4 <code>set-max-plugin-size</code></a></li><li><a href="#95-get-max-plugin-size" class="table-of-contents__link toc-highlight">9.5 <code>get-max-plugin-size</code></a></li><li><a href="#96-is-plugin-visible" class="table-of-contents__link toc-highlight">9.6 <code>is-plugin-visible</code></a></li><li><a href="#97-get-active-view" class="table-of-contents__link toc-highlight">9.7 <code>get-active-view</code></a></li><li><a href="#98-get-dashboard-status" class="table-of-contents__link toc-highlight">9.8 <code>get-dashboard-status</code></a></li></ul></li><li><a href="#10-memory-diagnostics--auditing-commands" class="table-of-contents__link toc-highlight">10. Memory Diagnostics &amp; Auditing Commands</a><ul><li><a href="#101-enable-memory-record" class="table-of-contents__link toc-highlight">10.1 <code>enable-memory-record</code></a></li><li><a href="#102-disable-memory-record" class="table-of-contents__link toc-highlight">10.2 <code>disable-memory-record</code></a></li><li><a href="#103-audit-memory" class="table-of-contents__link toc-highlight">10.3 <code>audit-memory</code></a></li></ul></li><li><a href="#next-steps" class="table-of-contents__link toc-highlight">Next Steps</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/iotgateway-docs/">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/iotgateway-docs/overview/quick_start">Quick Start Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/iotgateway-docs/overview/hardware_pinout">Hardware Pinout</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Company &amp; Distribution</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://consth.vn/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Công ty CP Thương Mại CONSTH<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://consth.vn/" target="_blank" rel="noopener noreferrer" class="footer__link-item">CONSTH Corporate Portal<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Software &amp; Repositories</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/aiottech/iotgateway/tree/main/bin" target="_blank" rel="noopener noreferrer" class="footer__link-item">Firmware Releases<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/aiottech" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Organization<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Công ty Cổ phần Thương mại CONSTH (CONSTH Vietnam). All rights reserved.</div></div></div></footer></div>
+</body>
+</html>
